@@ -1,15 +1,10 @@
 spring:
-  #config:
-    #import: optional:configserver:http://localhost:8888
-  #cloud:
-  #  config:
-  #    server:
-  #      native: # 서버 실행시 profile 설정시 native를 지정해야 적용됩니다.
-  #        search-locations: file://${user.home}/IdeaProjects/book-msa/config/src/main/resources/server-configs
-
   cloud:
     config:
       server:
         git:
           uri: https://github.com/ehwnsghl2/e-commerce-config
-          #search-paths: config
+          search-paths: config
+      discovery:
+        enabled: true
+
